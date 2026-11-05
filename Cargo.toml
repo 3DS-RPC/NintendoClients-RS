@@ -1,0 +1,22 @@
+[package]
+name = "nintendoclients"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+description = "Rust port of the NintendoClients 3DS/Wii U friend code"
+license = "MIT"
+repository = "https://github.com/3DS-RPC/NintendoClients-rs"
+
+[dependencies]
+base64 = "0.22"
+flate2 = "1"
+getrandom = "0.2"
+hmac = "0.12"
+log = "0.4"
+md-5 = "0.10"
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls"] }
+thiserror = "2"
+tokio = { version = "1", features = ["net", "sync", "time", "macros", "rt-multi-thread"] }
+
+[dev-dependencies]
+env_logger = "0.11"
